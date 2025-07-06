@@ -7,20 +7,25 @@ from PIL import Image
 # Load the trained model
 # model = load_model('face_mask_detection_model.h5')
 
-import gdown
 import os
+import gdown
+from tensorflow.keras.models import load_model # Assuming these are already imported at the top of your app.py
 
-# Download the model from Google Drive if not already present
 model_path = "face_mask_detection_model.h5"
+
+
+# The File ID is everything between '/d/' and '/view?'
+new_file_id = "1ZXJUNy-dFF7VTm8AFls4XXe2808O469v"
+
 if not os.path.exists(model_path):
-    file_id = "1fhxBzRsjMMwuVMq7b-DXH_EJUCVP-slw"
-    url = f"https://drive.google.com/uc?id={file_id}"
+    url = f"https://drive.google.com/uc?id={new_file_id}"
+    print(f"Downloading model from: {url}") # Added for clarity in logs
     gdown.download(url, model_path, quiet=False)
+else:
+    print(f"Model already exists at: {model_path}, skipping download.") # Added for clarity in logs
 
 # Load the trained model
 model = load_model(model_path)
-
-
 
 
 st.title("😷 Face Mask Detection App")

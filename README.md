@@ -17,7 +17,8 @@ The Face Mask Detection project uses TensorFlow and Keras to classify whether a 
 1. python -m venv venv
 
 2. venv\Scripts\activate #For windows
-   source venv/bin/activate #For mac
+
+3. source venv/bin/activate #For mac
 
 4. pip install streamlit tensorflow opencv-python pillow
 

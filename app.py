@@ -9,7 +9,6 @@ from PIL import Image
 
 import gdown
 import os
-from tensorflow.keras.models import load_model
 
 # Download the model from Google Drive if not already present
 model_path = "face_mask_detection_model.h5"

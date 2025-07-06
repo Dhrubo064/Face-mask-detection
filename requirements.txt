@@ -4,5 +4,5 @@ tensorflow
 pillow
 numpy
 gdown
-Pandas
-Matplotlib
+pandas
+matplotlib

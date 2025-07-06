@@ -5,11 +5,9 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load the trained model
-# model = load_model('face_mask_detection_model.h5')
 
 import os
 import gdown
-from tensorflow.keras.models import load_model # Assuming these are already imported at the top of your app.py
 
 model_path = "face_mask_detection_model.h5"
 
